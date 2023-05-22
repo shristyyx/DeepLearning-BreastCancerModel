@@ -117,9 +117,9 @@ ip_reshaped = ip_data_np.reshape(1,-1)
 ip_data_std = scaler.transform(ip_reshaped)
 
 prediction = model.predict(ip_data_std)
-print(prediction)
+print(prediction)    # prints the probability of both the classes being true
 
-prediction_label = [np.argmax(prediction)]
+prediction_label = [np.argmax(prediction)]   # prints the index of class whose percentage is higher
 print(prediction_label)
 
 if(prediction_label[0] == 0):
